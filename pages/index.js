@@ -1,14 +1,19 @@
-import xw from 'xwind'
-import ButtonReact from '../components/ButtonReact'
-import ButtonStyled from '../components/ButtonStyled'
+import Head from 'next/head'
+import Image from 'next/image'
+import Sidebar from '../components/Sidebar'
 
-const Index = () => (
-  <div css={xw`grid justify-center items-center h-screen space-y-20`}>
-    <div css={xw`space-y-20`}>
-      <ButtonReact>@emotion/react</ButtonReact>
-      <ButtonStyled>@emotion/styled</ButtonStyled>
+const Home = () => {
+  return (
+    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+      <Head>
+        <title>Create Next App</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <main className="bg-black min-h-screen text-white">
+        <Sidebar />
+      </main>
     </div>
-  </div>
-)
+  )
+}
 
-export default Index
+export default Home
